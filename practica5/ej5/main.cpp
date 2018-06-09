@@ -49,7 +49,7 @@ void take(int n, List xs){
     cout << n ;
   }
   // while (not isNil(xs)) tkTail(xs); // avoid memory leak
-  xs = ws; 
+
 }
 
 int main(){
@@ -61,7 +61,7 @@ int main(){
   mkCons(4, xs);
 
   printList(xs);
-  take(1, xs);
+  take(2, xs);
   printList(xs);
 }
      

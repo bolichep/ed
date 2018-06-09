@@ -1,4 +1,8 @@
 #!/bin/bash
+if [ $# -eq 0 ]; then 
+  echo "Give project name"
+  exit
+fi
 touch ${1^}.cpp ${1^}.h main.cpp
 echo "Creating ${1^}"
 echo "#include \"${1^}.h\"" >> ${1^}.cpp
