@@ -23,14 +23,17 @@ int length(List xs){
 }
 
 void mapSucc(List& xs){
-  cout << endl << "Como carajo!!!" << endl;
   List ws = Nil();
   while( not isNil(xs)){
     mkCons(head(xs)+1, ws);
     tkTail(xs);
   }
   xs = ws;
-  cout << "Devuelvo la lista en el parametro!!!" << endl;
+  cout << "Devuelvo la lista en el parametro por que es por referencia!!!" << endl;
+}
+
+void ver(List xs,int  n){
+    cout << "*" << n << " " << xs;
 }
 
 // prec n < len xs
@@ -42,27 +45,39 @@ void drop(int n, List& xs){
 void take(int n, List& xs){
   List ws = Nil();
   for(;n > 0 ; n--){
-    cout << n ;
     mkSnoc(ws, head(xs));
-   // mkCons(head(xs), ws);
+    // mkCons(head(xs), ws);
     tkTail(xs);
-    cout << n ;
   }
   // while (not isNil(xs)) tkTail(xs); // avoid memory leak
 
 }
 
 int main(){
-  List xs;
+  List xs, ys;
   xs = Nil();
+  ys = Nil();
   mkCons(1, xs);
   mkCons(2, xs);
   mkCons(3, xs);
   mkCons(4, xs);
-
+  mkCons(5, xs);
+  mkCons(6, xs);
   printList(xs);
+<<<<<<< HEAD
   take(2, xs);
+=======
+  take(3, xs);
+>>>>>>> 68b1c492ea5eb451d910a4471ea2a5d59fea5c4f
   printList(xs);
+
+  mkSnoc(ys,1);
+  mkSnoc(ys,2);
+  mkSnoc(ys,3);
+  mkSnoc(ys,4);
+  cout << "$";
+  printList(ys);
+
 }
      
 int main2 (){
