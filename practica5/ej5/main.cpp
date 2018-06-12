@@ -39,7 +39,7 @@ void drop(int n, List& xs){
 }
 
 // prec n =< len xs
-void take(int n, List xs){
+void take(int n, List& xs){
   List ws = Nil();
   for(;n > 0 ; n--){
     cout << n ;
