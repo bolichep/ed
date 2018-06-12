@@ -1,0 +1,2 @@
+S= Coordenada.cpp	Dir.cpp  main.cpp  Tablero.cpp
+H= Coordenada.h  Dir.h  Tablero.h
